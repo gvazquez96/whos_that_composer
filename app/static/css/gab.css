@@ -1,0 +1,282 @@
+* {
+    font-family: "Press Start 2P", cursive;
+}
+
+body {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    background-color: #EEDEC5;
+}
+
+p,
+li,
+label,
+span {
+    font-size: 0.75rem;
+    line-height: 2;
+    background-color: #EEDEC5;
+}
+
+.nes-container {
+    margin-bottom: 1.5rem;
+}
+
+.nes-field {
+    margin-bottom: 1rem;
+}
+
+.nes-btn,
+.nes-btn.is-primary {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.image-bach {
+    display: flex;
+    align-items: flex-start;
+}
+
+audio {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+/* Títulos */
+.nes-container.with-title>.title {
+    background-color: #EEDEC5;
+    color: #AC3232;
+    border: 3px solid #000;
+    padding: 0.2rem 0.5rem;
+}
+
+/* Botón primario (rojo) */
+.nes-btn.is-primary {
+    background-color: #AC3232;
+    color: #fff;
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
+
+.nes-btn.is-primary::after {
+    box-shadow: inset -4px -4px #901919;
+}
+
+.nes-btn.is-primary:hover {
+    background-color: #901919;
+}
+
+.nes-btn.is-primary:hover::after {
+    box-shadow: inset -6px -6px #701010;
+}
+
+.nes-btn.is-primary:active:not(.is-disabled)::after {
+    box-shadow: inset 4px 4px #901919;
+}
+
+/* Botón warning (amarillo #FFBF00) */
+.nes-btn.is-warning {
+    background-color: #FFBF00;
+    color: #000;
+    margin-bottom: 20px;
+    vertical-align: middle;
+}
+
+.nes-btn.is-warning::after {
+    box-shadow: inset -4px -4px #CC9900;
+}
+
+.nes-btn.is-warning:hover {
+    background-color: #CC9900;
+}
+
+.nes-btn.is-warning:hover::after {
+    box-shadow: inset -6px -6px #997300;
+}
+
+.nes-btn.is-warning:active:not(.is-disabled)::after {
+    box-shadow: inset 4px 4px #CC9900;
+}
+
+/* Enlaces perfil */
+.nes-list a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 2px solid #AC3232;
+}
+
+.nes-list a:hover {
+    color: #AC3232;
+}
+
+/* Opciones radio en question */
+.radio-option {
+    display: block;
+    padding: 0.4rem 0;
+    padding-left: 3rem;
+    text-indent: -3rem;
+    border-bottom: 1px dashed #ccc;
+    cursor: pointer;
+}
+
+.radio-option:last-of-type {
+    border-bottom: none;
+}
+
+.radio-option:hover span {
+    color: #AC3232;
+}
+
+/* Flechita del radio: parpadeo negro al seleccionar */
+.nes-radio:checked+span::before {
+    animation: blink 1s infinite steps(1);
+}
+
+/* Mozart flotando a la izquierda en question */
+.question-layout {
+    position: relative;
+}
+
+.beethoven-question-float {
+    position: absolute;
+    left: -180px;
+    top: 9rem;
+    width: 170px;
+    image-rendering: pixelated;
+}
+
+/* Fila: caja de opciones + columna de comodines a la derecha */
+
+.comodines {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: -260px;
+    top: 0px;
+}
+
+/* Mozart encima del cuadro en correct */
+.mozart-top {
+    width: 160px;
+    image-rendering: pixelated;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Botón responder: separación con racha */
+
+/* Pantalla correct (verdes) */
+.correct-text {
+    color: #2E6F40;
+    font-size: 0.85rem;
+}
+
+.correct-btn {
+    background-color: #2E6F40;
+    color: #fff;
+}
+
+.correct-btn::after {
+    box-shadow: inset -4px -4px #1E5430;
+}
+
+.correct-btn:hover {
+    background-color: #1E5430;
+    color: #fff;
+}
+
+.correct-btn:hover::after {
+    box-shadow: inset -6px -6px #123A20;
+}
+
+.correct-btn:active:not(.is-disabled)::after {
+    box-shadow: inset 4px 4px #1E5430;
+}
+
+/* Pantalla lost (rojo) */
+.lost-text {
+    color: #AC3232;
+    font-size: 0.85rem;
+}
+
+/* Flash messages separación */
+.nes-container.is-rounded {
+    margin-bottom: 2rem;
+}
+
+/* Botón cerrar sesión (azul) */
+.logout-btn {
+    background-color: #1A56DB;
+    color: #fff;
+}
+
+.logout-btn::after {
+    box-shadow: inset -4px -4px #113CA0;
+}
+
+.logout-btn:hover {
+    background-color: #113CA0;
+    color: #fff;
+}
+
+.logout-btn:hover::after {
+    box-shadow: inset -6px -6px #0C2B75;
+}
+
+.logout-btn:active:not(.is-disabled)::after {
+    box-shadow: inset 4px 4px #113CA0;
+}
+
+/* Volver al inicio (rojo) */
+.back-link {
+    color: #AC3232;
+    text-decoration: none;
+    border-bottom: 2px solid #AC3232;
+}
+
+.back-link:hover {
+    color: #901919;
+}
+
+/* Fila de botones alineados */
+.button-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.beethoven-float {
+    position: absolute;
+    right: -180px;
+    top: 4rem;
+    width: 250px;
+    image-rendering: pixelated;
+}
+
+.bach-float {
+    position: absolute;
+    right: 110px;
+    top: 0px;
+    width: 170px;
+    image-rendering: pixelated;
+    padding: 0rem;
+}
+
+.nes-text {
+    color: #CC9900;
+}
+/* Créditos de los GIFs */
+.credits {
+    margin: 2rem 0 1rem;
+    text-align: center;
+    font-size: 0.6rem;
+    color: #888;
+}
+.credits a {
+    color: #888;
+}
+.credits .nes-icon {
+    vertical-align: middle;
+}

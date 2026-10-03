@@ -1,0 +1,10 @@
+Flask
+Flask-SQLAlchemy
+Flask-Session
+SQLAlchemy
+pretty-midi
+numpy
+scipy
+pytest
+sounddevice
+bcrypt

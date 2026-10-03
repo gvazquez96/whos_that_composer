@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <img src="/static/gifs/mozart3.gif" alt="Mozart 8bit" style="position: relative; right: -200px; width: 250px;">
+<div class="nes-container is-centered">
+    <p class="lost-text">¡Has perdido, sonotone!</p>
+    {% if gamemode == "name" %}
+        <h6>La pieza es "{{ piece.name }}", de {{piece.composer}}.</h6>
+    {% elif gamemode == "composer" %}
+        <h6>La pieza es "{{piece.name}}" y fue compuesta por {{piece.composer}}</h6>
+    {% else %}
+        <h6>La pieza es "{{piece.name}}", de {{piece.composer}}, y fue compuesta en el año {{piece.year}}</h6>
+    {% endif %}
+    <div class="nes-text is-primary">
+    {% if streak < 5 %}
+        <p>Racha de {{ streak }} seguidas... sin comentarios.</p>
+    {% elif 5 <= streak <= 10 %}
+        <p>Racha de {{ streak }} seguidas. Aprobao justito.</p>
+    {% elif 10 < streak <= 15 %}
+        <p>Racha de {{ streak }} seguidas. Vamos mejorando.</p>
+    {% elif 15 < streak <= 20 %}
+        <p>Racha de {{ streak }} seguidas. Esto se empieza a poner serio.</p>
+    {% elif streak > 20 %}
+        <p>Racha de {{ streak }} seguidas. El alumno supera al maestro.</p>
+    {% endif %}
+    </div>
+
+    {% if streak > max_streak %}
+        <p class="correct-text">¡Nuevo récord: {{ streak }} seguidas!</p>
+    {% endif %}
+</div>
+<div class="lost-buttons">
+<a class="nes-btn is-primary" href="/new_game">¿Otra?</a>
+<a class="nes-btn" style="position: relative; bottom: 6.5px;" href="/">Volver al inicio</a>
+</div>
+<audio autoplay>
+    <source src="/static/lost_2.wav" type="audio/wav">
+</audio>
+{% endblock %}
