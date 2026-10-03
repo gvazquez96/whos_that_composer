@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<form action="/new_round" method="post">
+    <div class="nes-select">
+    <label for="gamemode">Modos de juego</label>
+    <select required id="default-select" name="gamemode">
+        <option value="">--Selecciona un modo--</option>
+        <option value="name">Pieza</option>
+        <option value="composer">Compositor</option>
+        <option value="year">Año de composición</option>
+    </select>
+    </div>
+    <a class="nes-btn is-primary" onclick="this.closest('form').submit(); return false;" href="#">Seleccionar</a>
+</form>
+{% endblock %}

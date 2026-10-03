@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<form action="/check/" method="post">
+    <div class="question-layout">
+        <img src="/static/gifs/beethoven1.gif" alt="Beethoven pixelado" class="beethoven-question-float">
+        <div class="nes-container with-title">
+            {% if gamemode == "name" %}
+                <p class="title">¿Qué pieza es?</p>
+            {% elif gamemode == "composer" %}
+                <p class="title">¿Quién compuso esta pieza?</p>
+            {% else %}
+                <p class="title">¿En qué año se compuso esta pieza?</p>
+            {% endif %}
+
+            {% for option in session_options %}
+                <label class="radio-option">
+                    <input type="radio" class="nes-radio" name="answer" value="{{ option }}">
+                    <span>{{ option }}</span>
+                </label>
+            {% endfor %}
+        </div>
+        <div class="comodines">
+            <div class="nes-badge" style="margin-bottom: 1.5rem">
+                <span class="is-primary">Comodines</span>
+            </div>
+            {% if wildcards %}
+                {% for key, value in wildcards.items() %}
+                    <div class="nes-container">
+                        <a href="/wildcards/{{key}}/" class="nes-btn" align="center">{{value}}</a>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="nes-container">
+                    <p>¡Sin comodines!</p>
+                    <img src="/static/gifs/schumann.gif" style="width:180px" alt="Schumann gif">
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <audio autoplay>
+        <source src="/static/piece.wav" type="audio/wav">
+    </audio>
+    <div class="button-row">
+        <a class="nes-btn is-primary" onclick="this.closest('form').submit(); return false;" href="#">Responder</a>
+        <a class="nes-btn is-warning" href="/end_game/">Terminar partida</a>
+    </div>
+</form>
+<div class="nes-container">
+    <p>Tu racha actual: {{ streak }} · Récord previo: {{ max_streak }}</p>
+</div>
+{% endblock %}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/nes.css@2.2.1/css/nes.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/gab.css">
+    <title>¿Quién es ese músico?</title>
+  </head>
+  <body>
+    {% with messages = get_flashed_messages()%}
+    {% for message in messages %}
+    <div class="nes-container is-rounded">
+      <p>{{ message }}</p>
+    </div>
+    {% endfor %}
+    {% endwith %}
+    {% block content %}
+    {% endblock %}
+  </body>
+</html>

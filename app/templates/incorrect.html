@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<audio autoplay>
+    <source src="/static/incorrect.wav" type="audio/wav">
+</audio>
+<div class="nes-container is-centered">
+    <p class="nes-text">¡Esa no, espabila!</p>
+    <p>Te queda {{ lives }} vida.</p>
+    <a class="nes-btn is-warning" href="/attempt">Inténtalo de nuevo</a>
+</div>
+{% endblock %}

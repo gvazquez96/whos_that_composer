@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div>
+    <div>
+        <div class="nes-container with-title is-centered">
+            <p class="title">¿Quién es ese músico?</p>
+            <p>Bienvenida al juego de adivinanzas musicales.</p>
+        </div>
+        <div class="nes-container with-title">
+            <p class="title">Jugar</p>
+            <a class="nes-btn is-primary" href="/new_game">Modos de juego</a>
+            <img src="/static/gifs/bach.gif" alt="Bach pixelado" class="bach-float">
+        </div>
+        <div class="nes-container with-title">
+            <p class="title">Perfil</p>
+            <ul class="nes-list is-disc">
+                <li><a href="/login">Iniciar sesión</a></li>
+                <li><a href="/logout">Cerrar sesión</a></li>
+                <li><a href="/register">Registrarse</a></li>
+                <li><a href="/delete_user">Borrar cuenta</a></li>
+            </ul>
+            <img src="/static/gifs/debussy.gif" alt="Debussy 8bit" style="width: 180px; position: absolute; right: 200px; top: 30px;">
+        </div>
+    </div>
+</div>
+<footer class="credits">
+    <p>
+    Ilustraciones pixel art (GIFs) © ClassicalPixel.
+    </p>
+    <p>
+    <a href="https://www.instagram.com/classicalpixel/" target="_blank" rel="noopener noreferrer">
+        <i class="nes-icon instagram is-small"></i> @classicalpixel
+    </a>
+    </p>
+</footer>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="correct-screen" style="text-align: center;">
+    <img src="/static/gifs/mozart2.gif" alt="Mozart pixelado" class="mozart-top">
+</div>
+<div class="nes-container is-centered correct-screen" display="flex">
+    <p class="correct-text">Bien... ¿será suerte?</p>
+    {% if gamemode == "name" %}
+        <h6>Fue compuesta por {{piece.composer}} en el año {{piece.year}}.</h6>
+    {% elif gamemode== "year" %}
+        <h6>La pieza es "{{piece.name}}", de {{piece.composer}}.</h6>
+    {% else %}
+        <h6>La pieza es "{{piece.name}}", compuesta en el año {{piece.year}}.</h6>
+    {% endif %}
+
+    <a class="nes-btn correct-btn" href="/new_round">Siguiente</a>
+    <a class="nes-btn" style="position: relative; bottom: 4.5px;" href="/">Volver al inicio</a>
+</div>
+<audio autoplay>
+    <source src="/static/correct.wav" type="audio/wav">
+</audio>
+{% endblock %}

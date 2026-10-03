@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<image src="/static/gifs/schumann.gif" style="width: 300px">
+<div class="nes-container with-title is-centered">
+    <p class="title">¿Te vas?</p>
+    <form action="/remove_user" method="POST">
+        <button type="submit" class="nes-btn logout-btn">Cerrar sesión</button>
+    </form>
+</div>
+<p><a class="nes-btn" href="/">Volver al inicio</a></p>
+{% endblock %}
