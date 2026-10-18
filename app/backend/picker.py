@@ -12,7 +12,6 @@ def picker(pieces):
     used = pieces
     piece = random.choice(list(used))
     used.remove(piece)
-    print(len(pieces))
     return piece
 
 

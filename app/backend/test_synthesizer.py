@@ -1,22 +1,12 @@
-import synthesizer
-import pytest
+from pathlib import Path
+
 import numpy
 
-midi_data = synthesizer.read_midi(
-    "/Users/gabrul/Documents/Cosas mías/Code/composer/music/midi_files/bwv988.mid")
+from app.backend.synthesizer import read_midi, synthesize_midi
 
-
-synthesizer.get_sound_window(midi_data)
-for instrument in midi_data.instruments:
-    print(len(instrument.notes))
-    for note in instrument.notes:
-        print(note.start)
-    for change in instrument.control_changes:
-        print(change.time)
-    for pitch in instrument.pitch_bends:
-        print(pitch.time)
+MIDI_FILE = Path(__file__).parents[1] / "music" / "midi_files" / "bwv988.mid"
 
 
 def test_synthesize_midi():
-
-    assert numpy.any(synthesizer.synthesize_midi(midi_data))
+    midi_data = read_midi(str(MIDI_FILE))
+    assert numpy.any(synthesize_midi(midi_data))

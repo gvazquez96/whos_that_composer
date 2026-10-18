@@ -6,5 +6,4 @@ pretty-midi
 numpy
 scipy
 pytest
-sounddevice
 bcrypt

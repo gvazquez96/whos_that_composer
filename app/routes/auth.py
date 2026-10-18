@@ -1,5 +1,4 @@
 from flask import Blueprint, render_template, request, session, redirect, url_for, flash
-from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.exc import IntegrityError, NoResultFound
 from app.models import db, User
 import bcrypt
@@ -77,7 +76,6 @@ def validate_user():
     try:
         user = db.session.execute(
             db.select(User).filter_by(name=name)).scalar_one()
-        print(user.password)
         if user.name == name and bcrypt.checkpw(to_bytes, user.password):
             session["user"] = user.name
             session["max_streak"] = user.max_streak

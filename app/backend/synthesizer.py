@@ -2,7 +2,6 @@ from pretty_midi import PrettyMIDI
 from pathlib import Path
 import numpy
 import scipy
-import sounddevice as sd
 
 WINDOW = 10
 FS = 44100

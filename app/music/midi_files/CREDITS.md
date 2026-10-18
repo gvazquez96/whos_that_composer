@@ -4,7 +4,7 @@ Las obras musicales de este directorio son de dominio público. Las **secuencias
 
 ## Declaración de uso no comercial
 
-Estos archivos MIDI se incluyen **exclusivamente con fines educativos y lúdicos, sin ninguna finalidad comercial**. El proyecto se distribuye de forma gratuita y sin ánimo de lucro, y no se obtiene ningún beneficio económico directo ni indirecto de su uso. Los derechos de cada secuencia pertenecen a sus respectivos autores. Si eres titular de alguno de estos archivos y deseas que se retire o que se modifique su atribución, abre una incidencia en el repositorio o escribe un mail a [composers.game@gmail.com](mailto:vazquezfuertesgabriel@gmail.com) y se atenderá de inmediato.
+Estos archivos MIDI se incluyen **exclusivamente con fines educativos y lúdicos, sin ninguna finalidad comercial**. El proyecto se distribuye de forma gratuita y sin ánimo de lucro, y no se obtiene ningún beneficio económico directo ni indirecto de su uso. Los derechos de cada secuencia pertenecen a sus respectivos autores. Si eres titular de alguno de estos archivos y deseas que se retire o que se modifique su atribución, abre una incidencia en el repositorio o escribe un mail a [composers.game@gmail.com](mailto:composers.game@gmail.com) y se atenderá de inmediato.
 
 ## Procedencia
 
